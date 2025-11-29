@@ -20,7 +20,7 @@ router.get('/add-product', (req, res, next) => {
 // /admin/add-product => POST
 router.post('/add-product', (req, res, next) => {
   const price = Math.floor(Math.random() * 90)+10;
-  const desc = "awesome product" + req.body.title;
+  const desc = "Awesome product " + req.body.title;
   products.push({ title: req.body.title, price: price, desc: desc });
   //console.log(req.body);
   res.redirect('/');
